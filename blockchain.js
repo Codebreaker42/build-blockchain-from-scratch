@@ -33,12 +33,12 @@ class Blockchain{
         }
         // chain[0]!=Block.getGenesisBlock(): Will not work before they are different instance function(use this:JSON.stringify())
         for(let i=1;i<chain.length;i++){
-            const {timestamp,prevHash,hash,data}=chain[i];
+            const {timestamp,prevHash,hash,difficulty,nonce,data}=chain[i];
             const lastHash=chain[i-1].hash;
             if(prevHash!==lastHash){
                 return false;
             }
-            if(hash!==hashValue(timestamp,prevHash,data)){
+            if(hash!==hashValue(timestamp,prevHash,difficulty,nonce,data)){
                 return false;
             }
         }
