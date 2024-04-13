@@ -14,6 +14,18 @@ class Blockchain{
      });
         this.chain.push(newBlock);
     }
+    // raplace chain and accept those chain which is longer the current chain
+    replaceChain(chain){
+        if(chain<this.chain.length){
+            console.error("This Chain in no longer than the current chain");
+            return;
+        }
+        if(!Blockchain.isValidBlockChain(chain)){
+            console.error("This Chain is Not Valid");
+            return;
+        }
+        this.chain=chain;
+    }
     // checking if the chain or block valid or not prevent from attacker
     static isValidBlockChain(chain){
         if(JSON.stringify(chain[0])!=JSON.stringify(Block.getGenesisBlock())){  // if first block of chain is not a genesis block of our chain
