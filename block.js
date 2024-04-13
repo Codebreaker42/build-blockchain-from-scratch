@@ -30,11 +30,13 @@ class Block{
 }
 
 // creating object
-const block1 = new Block("12/09/2024", "0x123", "0x456", "block");
-console.log(block1);
+// const block1 = new Block("12/09/2024", "0x123", "0x456", "block");
+// console.log(block1);
 
-const genesisBlock = Block.getGenesisBlock();
-console.log(genesisBlock);
+// const genesisBlock = Block.getGenesisBlock();
+// console.log(genesisBlock);
 
-const result=Block.mineBlock({prevBlock:block1,data:'block2'});
-console.log(result);
+// const result=Block.mineBlock({prevBlock:block1,data:'block2'});
+// console.log(result);
+
+module.exports=Block;
