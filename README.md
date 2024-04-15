@@ -16,4 +16,9 @@ index.js file description:
  - cross-env5.2.0(module): require to run multiple node(miner) to change the port dynamically    
  -request2.88.0(module): to sync the all peer node getting the whole information about blockchain
 install the postman application for the request to add block using post method
-    
+
+how to use:
+   open the redis server
+   open the postman application
+   run index.js file by using (npm run dev) for admin node
+   run index.js file by using (npm run dev-peer) for all other node in a blockchain
