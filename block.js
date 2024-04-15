@@ -58,7 +58,7 @@ class Block{
 // console.log(block1);
 console.log('hi');
 const genesisBlock = Block.getGenesisBlock();
-console.log(genesisBlock);
+// console.log(genesisBlock);
 // const result=Block.mineBlock({prevBlock:block1,data:'block2'});
 // console.log(result);
 
