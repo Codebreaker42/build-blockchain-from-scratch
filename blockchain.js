@@ -17,7 +17,8 @@ class Blockchain {
     }
     // raplace chain and accept those chain which is longer the current chain
     replaceChain(chain) {
-        if (chain < this.chain.length) {
+        // console.log(this.chain);
+        if (chain.length <= this.chain.length) {
             console.error("This Chain in no longer than the current chain");
             return;
         }
