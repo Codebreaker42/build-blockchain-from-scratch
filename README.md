@@ -12,4 +12,7 @@ index.js file description:
     publish: miner mine the block in a network
     channel: information of block
     subscriber: get the information of block which subscriber subscribe which channel
+- redis2.8.0(module): required for taking the json response by the node server
+- cross-env5.2.0(module): require to run multiple node(miner) to change the port dynamically    
+-request2.88.0(module): to sync the all peer node getting the whole information about blockchain 
     
