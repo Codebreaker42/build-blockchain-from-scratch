@@ -7,3 +7,9 @@ block.js: logic to creating the blocks
 blockchain.js : actual blockchain 
 average_time.js: to mine and add the valid block by the miner and check the average time of mined block
 index.js : use express.js library to connect the minner in a website or server
+index.js file description:
+- publish subscribe model:
+    publish: miner mine the block in a network
+    channel: information of block
+    subscriber: get the information of block which subscriber subscribe which channel
+    
