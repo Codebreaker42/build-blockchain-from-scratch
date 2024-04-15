@@ -1,8 +1,7 @@
 // importing the genesis block 
 const {GENESIS_DATA} = require('./config');
-const hashValue = require('./crypto_hash');
-// importing the hash value
-const hash=require('./crypto_hash');
+const hashValue = require('./crypto_hash');// importing the hash value
+const hexToBinary=require('hex-to-binary'); // importing the predefine library to convert hex code into the binary numbers
 const MINE_RATE=1000;
 class Block{
     constructor(_timestamp, _prevHash, _hash, _data,_nonce,_difficulty){
@@ -29,7 +28,7 @@ class Block{
             timestamp=Date.now();
             difficulty=Block.adjustDifficulty({originalBlock:prevBlock,timestamp})
             hash=hashValue(timestamp,prevHash,data,nonce,difficulty);
-        }while(hash.substring(0,difficulty)!=='0'.repeat(difficulty));
+        }while(hexToBinary(hash).substring(0,difficulty)!=='0'.repeat(difficulty));
         // let hash=hashValue(timestamp,prevHash,data);
         return new this(
           timestamp,
@@ -60,7 +59,6 @@ class Block{
 console.log('hi');
 const genesisBlock = Block.getGenesisBlock();
 console.log(genesisBlock);
-
 // const result=Block.mineBlock({prevBlock:block1,data:'block2'});
 // console.log(result);
 
