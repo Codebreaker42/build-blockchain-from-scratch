@@ -1,4 +1,5 @@
 INITIAL_DIFFICULTY=3;
+MINE_RATE=1000;
 const GENESIS_DATA={
     timestamp:1,
     prevHash:'0x000',
