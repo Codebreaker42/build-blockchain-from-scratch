@@ -3,6 +3,7 @@ const {GENESIS_DATA} = require('./config');
 const hashValue = require('./crypto_hash');
 // importing the hash value
 const hash=require('./crypto_hash');
+const MINE_RATE=1000;
 class Block{
     constructor(_timestamp, _prevHash, _hash, _data,_nonce,_difficulty){
         this.timestamp = _timestamp;
@@ -24,9 +25,9 @@ class Block{
         let {difficulty}=prevBlock;
         let nonce=0;
         do{
-            console.log(nonce);
             nonce++;
             timestamp=Date.now();
+            difficulty=Block.adjustDifficulty({originalBlock:prevBlock,timestamp})
             hash=hashValue(timestamp,prevHash,data,nonce,difficulty);
         }while(hash.substring(0,difficulty)!=='0'.repeat(difficulty));
         // let hash=hashValue(timestamp,prevHash,data);
@@ -38,6 +39,18 @@ class Block{
           nonce,
           difficulty
       );
+    }
+    static adjustDifficulty({originalBlock,timestamp}){
+        const {difficulty}=originalBlock;
+        if(difficulty<1){
+            return 1;
+        } 
+        if(timestamp-originalBlock.timestamp> MINE_RATE){
+            return difficulty-1;
+        }
+        if(timestamp-originalBlock.timestamp<MINE_RATE){
+            return difficulty+1;
+        }
     }
 }
 
