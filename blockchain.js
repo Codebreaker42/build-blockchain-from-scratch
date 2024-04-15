@@ -42,6 +42,16 @@ class Blockchain {
             if (hash !== hashValue(timestamp, prevHash, difficulty, nonce, data)) {
                 return false;
             }
+            const validateHash=hashValue(
+                timestamp,
+                prevHash,
+                hash,
+                data,
+                nonce,
+                difficulty
+            );
+            if(hash!==validateHash) return false;
+            if(Math.abs(chain[i-1].difficulty-difficulty>1)) return false;
         }
         return true;
     }
