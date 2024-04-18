@@ -55,3 +55,17 @@ Once you have the project up and running, you can perform the following actions:
 
 To interact with the blockchain, you can use the provided API endpoints or integrate the blockchain into your own applications.
 
+## Contributing
+
+We welcome contributions from everyone interested in improving this blockchain project. If you have any suggestions, bug reports, or feature requests, please open an issue or submit a pull request. Together, we can make this project even better!
+
+## License
+
+This project is licensed under the MIT License. Feel free to use, modify, and distribute the code as needed.
+
+---
+
+Please note that building a blockchain from scratch can be a complex task, and this project aims to provide a simplified implementation for educational purposes. For production-grade blockchain solutions, it is recommended to use established blockchain platforms or frameworks.
+
+If you have any questions or need further assistance, feel free to reach out. Happy coding!
+
