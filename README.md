@@ -32,3 +32,26 @@ To get started with the project, follow these steps:
    
    ```bash
    git clone https://github.com/your-username/blockchain-project.git
+
+## Components
+
+The project consists of the following components:
+
+- `config.js`: Implements the logic for the genesis block, which is the first block in the blockchain.
+- `crypto_hash.js`: Generates a unique cryptographic hash code based on the block's timestamp, previous hash, and data.
+- `block.js`: Defines the structure and functionality of a block in the blockchain.
+- `blockchain.js`: Manages the blockchain, including adding blocks, verifying the chain, and resolving conflicts.
+- `average_time.js`: Calculates the average time taken to mine a block in the blockchain.
+- `index.js`: Connects the blockchain nodes in a network and enables interaction via a web server.
+
+## Usage
+
+Once you have the project up and running, you can perform the following actions:
+
+- Mine new blocks and add them to the blockchain.
+- Verify the integrity of the blockchain by validating each block's hash.
+- Resolve conflicts between different nodes in the network.
+- Calculate the average time taken to mine a block.
+
+To interact with the blockchain, you can use the provided API endpoints or integrate the blockchain into your own applications.
+
