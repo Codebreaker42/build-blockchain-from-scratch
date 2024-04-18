@@ -26,12 +26,12 @@ To get started with the project, follow these steps:
 2. Install the required dependencies:
 
    ```bash
-   git clone https://github.com/your-username/blockchain-project.git
+   npm install
 
 3. Start the project:
    
    ```bash
-   git clone https://github.com/your-username/blockchain-project.git
+   npm run
 
 ## Components
 
